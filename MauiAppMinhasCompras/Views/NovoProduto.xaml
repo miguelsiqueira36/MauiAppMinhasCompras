@@ -4,9 +4,45 @@
              x:Class="MauiAppMinhasCompras.Views.NovoProduto"
              Title="NovoProduto">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <StackLayout>
+            <VerticalStackLayout>
+                <Label 
+                     Text="Nome do Produto" Margin="5, 0, 5, 0"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" />
+
+                <Entry
+                     Placeholder="Degite o Nome do Produto" Margin="5, 7, 5, 0"
+                     x:Name="nmProduto"
+                     Keyboard="Default" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label 
+                     Text="Valor do Produto" Margin="5, 10, 5, 0"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" />
+
+                <Entry
+                     Placeholder="Digite o Valor do Produto" Margin="5, 7, 5, 0"
+                     x:Name="vlProduto"
+                     Keyboard="Numeric"
+                     TextChanged="OnPrecoTextChanged" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label 
+                     Text="Quantidade do Produto" Margin="5, 10, 5, 0"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" />
+
+                <Entry
+                     Placeholder="Digite a Quantidade do Produto" Margin="5, 7, 5, 0"
+                     x:Name="qtdProduto"
+                     Keyboard="Numeric" />
+            </VerticalStackLayout>
+            <HorizontalStackLayout Margin="5, 10, 5, 0">
+                <Button HorizontalOptions="Start" Text="Voltar" Clicked="OnVoltarClicked" />
+                <Button HorizontalOptions="End" Text="Salvar" Clicked="OnSalvarClicked" />
+            </HorizontalStackLayout>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

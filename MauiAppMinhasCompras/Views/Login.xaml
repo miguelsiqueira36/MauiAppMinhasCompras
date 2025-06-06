@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.Views.Login">
+    <VerticalStackLayout>
+        <StackLayout>
+            <VerticalStackLayout>
+                <Label 
+                    Text="Nome" Margin="5, 0, 5, 0"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+                
+                <Entry
+                    Placeholder="Degite o seu Nome" Margin="5, 10, 5, 0"
+                    x:Name="entryUsuario"
+                    Keyboard="Default" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label 
+                    Text="Senha" Margin="5, 10, 5, 0"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+                
+                <Entry
+                    Placeholder="Digite sua Senha" Margin="5, 10, 5, 0"
+                    x:Name="entrySenha"
+                    Keyboard="Default" IsPassword="True" />
+            </VerticalStackLayout>
+            <VerticalStackLayout Margin="5, 10, 5, 0" HorizontalOptions="End">
+                <Button HorizontalOptions="Start" Text="Entrar" Clicked="OnEntrarClicked" />
+            </VerticalStackLayout>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
