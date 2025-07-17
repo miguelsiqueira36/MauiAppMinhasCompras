@@ -26,9 +26,10 @@
         <CollectionView ItemsSource="{Binding Produtos}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" ColumnDefinitions="*, Auto">
-                        <Label Text="{Binding Nome}" Grid.Column="0" />
-                        <Label Text="{Binding Valor, StringFormat='R$ {0:N2}'}" Grid.Column="1" />
+                    <Grid Padding="10" ColumnDefinitions="*, Auto, Auto">
+                        <Label Text="{Binding Descricao}" Grid.Column="0" />
+                        <Label Text="{Binding Preco, StringFormat='R$ {0:N2}'}" Grid.Column="1" />
+                        <Label Text="{Binding Quantidade}" Grid.Column="2" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

@@ -55,7 +55,7 @@ public partial class NovoProduto : ContentPage
                 Quantidade = double.TryParse(qtdProduto.Text, out double qtd) ? qtd : 0
             };
 
-            await Navigation.PopAsync(new ListaProduto()
+            await Navigation.PushAsync(new ListaProduto()
             {
                 BindingContext = p
             });
